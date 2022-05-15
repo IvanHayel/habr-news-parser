@@ -1,6 +1,6 @@
 package by.teachmeskills.client.service.impl;
 
-import by.teachmeskills.client.config.ClientProperties;
+import by.teachmeskills.client.config.ClientCommunicationProperties;
 import by.teachmeskills.client.domain.HabrNews;
 import by.teachmeskills.client.error.handler.HabrNewsErrorHandler;
 import by.teachmeskills.client.service.HabrNewsClientService;
@@ -22,9 +22,9 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class HabrNewsClientServiceImpl implements HabrNewsClientService {
     final RestTemplate template;
-    final ClientProperties properties;
+    final ClientCommunicationProperties properties;
 
-    public HabrNewsClientServiceImpl(RestTemplate template, ClientProperties properties) {
+    public HabrNewsClientServiceImpl(RestTemplate template, ClientCommunicationProperties properties) {
         template.setErrorHandler(new HabrNewsErrorHandler());
         this.template = template;
         this.properties = properties;
