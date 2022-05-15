@@ -25,11 +25,11 @@ import java.util.regex.Pattern;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class HabrNewsRepositoryImpl implements HabrNewsRepository {
-    static final String HABR_URL = "https://habr.com";
-    static final String ARTICLE_CLASS = "tm-article-snippet";
-    static final String ARTICLE_TITLE_CLASS = "tm-article-snippet__title-link";
-    static final String TIME_TAG = "time";
-    static final String DATETIME_ATTRIBUTE = "datetime";
+    private static final String HABR_URL = "https://habr.com";
+    private static final String ARTICLE_CLASS = "tm-article-snippet";
+    private static final String ARTICLE_TITLE_CLASS = "tm-article-snippet__title-link";
+    private static final String TIME_TAG = "time";
+    private static final String DATETIME_ATTRIBUTE = "datetime";
 
     final Connection HABR_CONNECTION;
 

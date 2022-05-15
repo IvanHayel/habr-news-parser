@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class HabrNews {
-    static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+    private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
     LocalDateTime date;
     String title;
