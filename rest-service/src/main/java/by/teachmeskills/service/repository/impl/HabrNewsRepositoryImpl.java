@@ -30,6 +30,7 @@ public class HabrNewsRepositoryImpl implements HabrNewsRepository {
     private static final String ARTICLE_TITLE_CLASS = "tm-article-snippet__title-link";
     private static final String TIME_TAG = "time";
     private static final String DATETIME_ATTRIBUTE = "datetime";
+    private static final String HREF_ATTRIBUTE = "href";
 
     final Connection HABR_CONNECTION;
 
@@ -79,7 +80,7 @@ public class HabrNewsRepositoryImpl implements HabrNewsRepository {
     }
 
     private String getArticleLink(Element articleTitle) {
-        String articleShortLink = Objects.requireNonNull(articleTitle).attr("href");
+        String articleShortLink = Objects.requireNonNull(articleTitle).attr(HREF_ATTRIBUTE);
         return HABR_URL.concat(articleShortLink);
     }
 }
