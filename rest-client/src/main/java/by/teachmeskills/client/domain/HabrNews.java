@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class HabrNews {
-    private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+    private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
 
     LocalDateTime date;
     String title;
@@ -22,6 +22,6 @@ public class HabrNews {
 
     @Override
     public String toString() {
-        return String.format("[%s] %s - %s", date.format(dtf), title, link);
+        return String.format("[%s] %s - %s", date.format(DEFAULT_FORMATTER), title, link);
     }
 }
